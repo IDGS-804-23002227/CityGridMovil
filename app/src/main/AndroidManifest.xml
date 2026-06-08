@@ -23,6 +23,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AlumbradoActivity"
+            android:exported="true"
+            android:label="Alumbrado Inteligente"
+            android:theme="@style/Theme.CityGrid">
+        </activity>
+        <activity
+            android:name=".ResiduosActivity"
+            android:exported="true"
+            android:label="Gestión de Residuos"
+            android:theme="@style/Theme.CityGrid">
+        </activity>
     </application>
 
 </manifest>
