@@ -246,7 +246,11 @@ fun BarraNavegacionInferiorCompartida(currentTab: String) {
                 icon = "home",
                 label = "Inicio",
                 isActive = currentTab == "Inicio",
-                onClick = { mostrarMensajeNoDisponible(context, "Inicio") }
+                onClick = {
+                    if (currentTab != "Inicio") {
+                        navegarAActividad(context, DashboardActivity::class.java)
+                    }
+                }
             )
             ElementoNavegacionInferiorCompartido(
                 icon = "trash",
