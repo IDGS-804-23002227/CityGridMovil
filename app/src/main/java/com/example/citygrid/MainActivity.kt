@@ -7,11 +7,8 @@ import androidx.activity.ComponentActivity
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val intent = Intent(this, AguaActivity::class.java)
-
+        val intent = Intent(this, DashboardActivity::class.java)
         startActivity(intent)
-
         finish()
     }
 }

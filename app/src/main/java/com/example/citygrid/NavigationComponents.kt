@@ -246,13 +246,21 @@ fun BarraNavegacionInferiorCompartida(currentTab: String) {
                 icon = "home",
                 label = "Inicio",
                 isActive = currentTab == "Inicio",
-                onClick = { mostrarMensajeNoDisponible(context, "Inicio") }
+                onClick = {
+                    if (currentTab != "Inicio") {
+                        navegarAActividad(context, DashboardActivity::class.java)
+                    }
+                }
             )
             ElementoNavegacionInferiorCompartido(
                 icon = "trash",
                 label = "Residuos",
                 isActive = currentTab == "Residuos",
-                onClick = { mostrarMensajeNoDisponible(context, "Residuos") }
+                onClick = {
+                    if (currentTab != "Residuos") {
+                        navegarAActividad(context, ResiduosActivity::class.java)
+                    }
+                }
             )
             ElementoNavegacionInferiorCompartido(
                 icon = "water",
@@ -268,7 +276,11 @@ fun BarraNavegacionInferiorCompartida(currentTab: String) {
                 icon = "sun",
                 label = "Alumbrado",
                 isActive = currentTab == "Alumbrado",
-                onClick = { mostrarMensajeNoDisponible(context, "Alumbrado") }
+                onClick = {
+                    if (currentTab != "Alumbrado") {
+                        navegarAActividad(context, AlumbradoActivity::class.java)
+                    }
+                }
             )
             ElementoNavegacionInferiorCompartido(
                 icon = "bell",
